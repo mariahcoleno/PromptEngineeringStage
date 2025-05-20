@@ -1,3 +1,5 @@
+from transformers import pipeline
+
 # Choose your model: "gpt2-medium" or "microsoft/phi-2"
 model_name = "microsoft/phi-2"  # or "gpt2-medium"
 generator = pipeline("text-generation", model=model_name, device=0)
