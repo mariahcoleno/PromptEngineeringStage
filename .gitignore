@@ -1,1 +1,18 @@
+
 .DS_Store
+
+Virtual environment
+
+venv/ .env/
+
+Python cache files
+
+pycache/ *.pyc *.pyo *.pyd
+
+IDE files
+
+.vscode/ .idea/
+
+Miscellaneous
+
+*.log *.tmp .DS_Store
