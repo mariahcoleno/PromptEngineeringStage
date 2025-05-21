@@ -32,7 +32,8 @@ This project demonstrates prompt engineering for open-source LLMs (e.g., GPT-2, 
    - Click Save.
 3. Install Dependencies: 
    - Add a new cell at the top of the notebook and run the following command to install dependencies from `requirements.txt`: `!pip install -r https://raw.githubusercontent.com/mariahcoleno/PromptEngineeringStage/main/requirements.txt`
-     - This ensures the required libraries are installed in the Colab environment.
+   - If the above command fails (e.g., due to network issues or GitHub access), use this fallback:`!pip install transformers torch`
+   - This ensures the required libraries are installed in the Colab environment.
 4. Run the Script:
    - Run all cells in the notebook to execute the prompt engineering script with few-shot examples and validation.
    - The script will use the GUP for faster inference.
@@ -58,7 +59,7 @@ A:
 **Validation:**  
 Passed
 
-## How to Modify
+Note: How to Modify
 - Change the `topic` variable in the script to test different queries.
 - Edit the examples in the `build_prompt` function to tune the prompt for your use case.
 
