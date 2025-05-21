@@ -46,14 +46,14 @@ This project demonstrates prompt engineering for open-source LLMs (e.g., GPT-2, 
 
 ### Example 
 **Prompt:**
-Topic: Machine learning
-A: It's when computers learn from examples to do tasks like guessing what's in a picture.
+- Topic: Machine learning
+- A: It's when computers learn from examples to do tasks like guessing what's in a picture.
 
-Topic: Python
-A: It's a programming language people use to tell computers what to do, like making games or apps.
+- Topic: Python
+- A: It's a programming language people use to tell computers what to do, like making games or apps.
 
-Topic: Photosynthesis
-A:
+- Topic: Photosynthesis
+- A:
 
 **Model Output:**  
 `It's how plants make food from sunlight, like when a leaf turns sunshine into sugar.`
