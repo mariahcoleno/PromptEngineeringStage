@@ -1,13 +1,17 @@
 # PromptEngineeringStage
 ### PromptEngineering
-Prompt Engineering with Few-Shot Examples and Validation
+Prompt Chaining and Few-Shot Engineering with Validation
 
 ### Overview
-This project demonstrates prompt engineering for open-source LLMs (e.g., GPT-2, Phi-2) using:
-- Few-shot prompt tuning (examples with answers)
-- Flexible validation logic
-- Fallback responses for reliability
-- Debugging output to observe model behavior
+This project demonstrates **prompt chaining** for open-source LLMs (e.g., GPT-2, Phi-2). 
+It generates a question, then an answer, then a refined answer, with validation and fallback logic at each step, using an advanced instruction-tuned model (`phi-2`).
+
+Key features:
+- **Prompt chaining**: Multi-step reasoning where each step's output is used as input for the next (question -> answer -> refined answer).
+- **Few-shot prompt tuning**: Prompts include examples with answers to guide the model (when appropriate).
+- **Flexible validation logic**: Automated checks ensure outputs are relevant and high quality.
+- **Fallback responses**: Reliable answers are provided even if the model's output is invalid. 
+- **Debugging output**: Observe model behavior and validation at each step.
 
 ### Requirements
 - Google Colab with GPU runtime (required for performance) 
@@ -47,13 +51,14 @@ This project demonstrates prompt engineering for open-source LLMs (e.g., GPT-2, 
 ### Example Colab Output (phi-2 Model Repetition and Improved Answer, GPU)
 
 - Below is a sample output from running the script in Google Colab with GPU enabled (`microsoft/phi-2` model).  
-- This output demonstrates how the model first repeats the prompt’s answer, then generates an improved, more detailed response on the next attempt.
+- This output demonstrates prompt chaining: the model first generates a question about "photosynthesis", then answers it, then refines the answer for clarity and simplicity.
 - For the topic "photosynthesis":
-  - The script prompts the model to explain "photosynthesis" to a 10 year-old. 
-  - The model initially repeats the prompt, then generates a more detailed and accurate answer on the next attempt. 
-  - The script extracts the answer from the model's output and validates it. 
-  - If the answer is correct, it is shown as the final output. If not, a fallback response is used. 
-  - In this example, the model's answer passed validation, so the extracted and final outputs are the same.
+  - The script prompts the model to generate a simple question for a 10-year old.
+  - The model generates an answer, which is then refined to be even more accessible. 
+  - Each step is validated; if the output fails validation, a fallback is used.  
+  - In this example, the model's outputs passed validation, so the extracted and final outputs are the same.
+
+Note: **Few-shot examples** are included in some prompts to help the model learn the desired format or reasoning style. This complements the prompt chaining approach by improving model relia$
 
 <details>
 <summary>Click to expand Colab output</summary>
