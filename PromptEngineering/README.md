@@ -1,6 +1,6 @@
 # PromptEngineeringStage
 ### PromptEngineering
-Prompt Chaining and Few-Shot Engineering with Validation
+Prompt Chaining and Few-Shot Engineering with Validation and Fallback Logic
 
 ### Overview
 This project demonstrates **prompt chaining** for open-source LLMs (e.g., GPT-2, Phi-2). 
@@ -20,7 +20,7 @@ Key features:
 
 ### Files
 - `requirements.txt`: Lists dependencies required to run scripts.
-- `prompt_engineering.py`: The main script that uses the transformers library for prompt engineering with few-shot examples and validation.
+- `prompt_engineering.py`: The main script that uses the transformers library for prompt chaining and few-shot engineering with validation and fallback logic.
 
 ### Setup and Usage
 1. Open the prompt_engineering.py script in Google Colab (https://colab.research.google.com/):
@@ -58,7 +58,7 @@ Key features:
   - Each step is validated; if the output fails validation, a fallback is used.  
   - In this example, the model's outputs passed validation, so the extracted and final outputs are the same.
 
-Note: **Few-shot examples** are included in some prompts to help the model learn the desired format or reasoning style. This complements the prompt chaining approach by improving model relia$
+Note: **Few-shot examples** are included in some prompts to help the model learn the desired format or reasoning style. This complements the prompt chaining approach by improving model reliability and output quality.
 
 <details>
 <summary>Click to expand Colab output</summary>
@@ -111,7 +111,7 @@ Photosynthesis is when plants use sunlight to make food, like when plants use th
 ### Project Structure
 - PromptEngineeringStage/
   - PromptEngineering/
-    - prompt_engineering.py # script for prompt engineering with few-shot examples and validation
+    - prompt_engineering.py 
     - README.md
     - requirements.txt
 
@@ -119,6 +119,8 @@ Photosynthesis is when plants use sunlight to make food, like when plants use th
 - Listed in requirements.txt:
   - transformers
   - torch (required for GPU support in Colab)
+  - streamlit (only need for web demo)
+
 
 
 
