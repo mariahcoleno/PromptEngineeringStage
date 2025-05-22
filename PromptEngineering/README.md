@@ -46,13 +46,18 @@ This project demonstrates prompt engineering for open-source LLMs (e.g., GPT-2, 
 
 ### Example Colab Output (phi-2 Model Repetition and Improved Answer, GPU)
 
-Below is a sample output from running the script in Google Colab with GPU enabled (`microsoft/phi-2` model).  
-This output demonstrates how the model first repeats the prompt’s answer, then generates an improved, more detailed response on the next attempt.
-For the topic "photosynthesis", the script prompts the model to explain "photosynthesis" to a 10 year-old. The model initially repeats the prompt, then generates a more detailed and accurate answer on the next attempt. The script extracts the answer from the model's output and validates it. If the answer is correct, it is shown as the final output. If not, a fallback response is used. In this example, the model's answer passed validation, so the extracted and final outputs are the same."
+- Below is a sample output from running the script in Google Colab with GPU enabled (`microsoft/phi-2` model).  
+- This output demonstrates how the model first repeats the prompt’s answer, then generates an improved, more detailed response on the next attempt.
+- For the topic "photosynthesis":
+  - The script prompts the model to explain "photosynthesis" to a 10 year-old. 
+  - The model initially repeats the prompt, then generates a more detailed and accurate answer on the next attempt. 
+  - The script extracts the answer from the model's output and validates it. 
+  - If the answer is correct, it is shown as the final output. If not, a fallback response is used. 
+  - In this example, the model's answer passed validation, so the extracted and final outputs are the same.
 
 <details>
 <summary>Click to expand Colab output</summary>
-```
+
 === Prompt Sent to Model ===
 
 Explain the following topic to a 10-year-old in 2 short sentences. Use simple words and include a real-world example.
@@ -91,7 +96,6 @@ True
 
 === Final Output (Model Answer) ===
 Photosynthesis is when plants use sunlight to make food, like when plants use the sun's energy to make sugar from water and carbon dioxide.
-'''
 
 </details>
 
