@@ -1,12 +1,8 @@
-# PromptEngineeringStage
-### PromptEngineering
-Prompt Chaining and Few-Shot Engineering with Validation and Fallback Logic
-
-### Overview
-This project demonstrates **prompt chaining** for open-source LLMs (e.g., GPT-2, Phi-2). 
+## Prompt Engineering Techniques
+This project demonstrates **prompt chaining** using open-source LLMs (e.g., GPT-2, Phi-2). 
 It generates a question, then an answer, then a refined answer, with validation and fallback logic at each step, using an advanced instruction-tuned model (`phi-2`).
 
-Key features:
+### Features:
 - **Prompt chaining**: Multi-step reasoning where each step's output is used as input for the next (question -> answer -> refined answer).
 - **Few-shot prompt tuning**: Prompts include examples with answers to guide the model (when appropriate).
 - **Flexible validation logic**: Automated checks ensure outputs are relevant and high quality.
@@ -17,9 +13,11 @@ Key features:
 - Google Colab with GPU runtime (required for performance) 
 - Python 3.x (pre-installed in Google Colab)
 - `transformers` library (installed during setup)
+- torch (required for GPU support in Colab)
+- streamlit (only need for web demo)
 
 ### Files
-- `requirements.txt`: Lists dependencies required to run scripts.
+- `requirements.txt`: Lists all Python dependencies required to run the techniques.
 - `prompt_engineering.py`: The main script that uses the transformers library for prompt chaining and few-shot engineering with validation and fallback logic.
 
 ### Setup and Usage
@@ -49,7 +47,6 @@ Key features:
 - Google Colab provides free GPU access, but sessions may time out after inactivity. Save your work frequently.  
 
 ### Example Colab Output (phi-2 Model Repetition and Improved Answer, GPU)
-
 - Below is a sample output from running the script in Google Colab with GPU enabled (`microsoft/phi-2` model).  
 - This output demonstrates prompt chaining: the model first generates a question about "photosynthesis", then answers it, then refines the answer for clarity and simplicity.
 - For the topic "photosynthesis":
@@ -118,11 +115,6 @@ Photosynthesis is when plants use sunlight to make food, like when plants use th
   - .gitignore
   - requirements.txt (in repo root for Streamlit cloud, needed if add demo) 
 
-### Dependencies
-- Listed in requirements.txt:
-  - transformers
-  - torch (required for GPU support in Colab)
-  - streamlit (only need for web demo)
 
 
 
