@@ -109,11 +109,14 @@ Photosynthesis is when plants use sunlight to make food, like when plants use th
 - Edit the examples in the `build_prompt` function to tune the prompt for your use case.
 
 ### Project Structure
-- PromptEngineeringStage/
-  - PromptEngineering/
-    - prompt_engineering.py 
+- prompt-engineering-techniques/
+  - prompt_engineering_techniques/
     - README.md
+    - app.py
+    - prompt_engineering.py 
     - requirements.txt
+  - .gitignore
+  - requirements.txt (in repo root for Streamlit cloud, needed if add demo) 
 
 ### Dependencies
 - Listed in requirements.txt:
